@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": ["backgroundscript.js"]
+   },
+   "browser_action": {
+
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "css": [ "contentscript.css" ],
+      "js": [ "jquery.min.js", "contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+
+   "description": "",
+   "manifest_version": 2,
+   "name": "Hammergeil",
+
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage", "webNavigation", "webRequest", "webRequestBlocking", "cookies", "unlimitedStorage", "identity", "https://www.googleapis.com/", "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1",
+   "web_accessible_resources": [ "*.*" ]
+}
