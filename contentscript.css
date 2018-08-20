@@ -38,7 +38,9 @@ summary {
 .pulsing {
     animation: pulse 1s linear infinite;
 }
-
+div#btnGetAllUsersFollowers {
+  background-color: gold;
+}
 #igBotInjectedContainer {
     margin: 0;
     padding: 0;

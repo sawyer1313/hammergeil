@@ -82,53 +82,23 @@
     <!-- https://refreshless.com/nouislider/ -->
     <div id="igBotQueueContainer">
       <div id="igBotQueueContainerMessage">
-        <p>1. This is the <i>queue</i>. Accounts will appear here after loading. Click the "Follow All From Queue" button to start following them.</p>
-        <p>2. Please read the instructions here: <a href="https://www.growbotforinstagram.com" target="_blank">https://www.growbotforinstagram.com</a></p>
-        <p>3. If you experience any issues please email <a href="mailto:instabotautomator@gmail.com">instabotautomator@gmail.com</a></p>
-        <p class="igBotUpdateNote">Note: If you see 429 rate limit, you just need to wait. It usually takes 10 minutes or less. It means instagram has temporarily blocked you from doing that specific action (loading more followers / followings, usually). Nothing is broken, it's
-          just the way it works now since recent changes that instagram made.
-        </p>
-        <p class="igBotUpdateNote">v0.4.2 updates:
-          <br> - Fixed some bugs with sorting
-          <br> - Add Load commenters button: now you can load all the people who commented on an account's posts
-        </p>
-          <p class="igBotUpdateNote">v0.4.1 updates:
-            <br> - Fixed bug where it would not unfollow anyone if "do not unfollow people who follow me" was checked
-          </p>
-          <p class="igBotUpdateNote">v0.3.9 updates:
-            <br> - Unfollowing should begin much faster
-            <br> - Unfollowing now can respect your filters
-            <br> - Unfollowing now displays accounts in the queue
-            <br> - Whitelisted or skipped accounts are faded
-            <br> - Unfollowed accounts are removed from queue
-            <br> - Adjust sizes so filter icon is not hidden
-          </p>
-          <details id="detailsUpdateInstructions" class="igBotUpdateNote">
-          <summary>You can force Chrome check for future Growbot updates (you have version <span id="igBotExtensionVersion">x.x.x</span>)</summary>
-          <br> Go to chrome://extensions by typing it into the address bar
-          <br> Check the Developer mode checkbox on the right-hand side.
-          <br> Click the "Update extensions now" button.
-        </details>
-        <br>
+        <p>1. This is the <i>Userpool</i>. Accounts will appear here after loading.</p>
+        <p>2. At first Navigate to a popular Instagram Page and click the "Load Followers" Button.</p>
+        <p>3. If you have any issues please email <a href="mailto:samorski@gmail.com">jsamorski@gmail.com</a></p>
       </div>
     </div>
-    <div id="divSubscriptionLink">
-      <h3>Other ways to subscribe</h3>
-      <o>The subscription options above work through your Google account.</p>
-        <p>If you can't subscribe through Google (such as if your country is not supported), please:</p>
-        <p><a href="https://www.growbotforinstagram.com/?guid=" id="websiteSubscribeLink" target="_blank">Subscribe through the Growbot site &rarr;</a>
-    </div>
+    
     <div id="igBotQueueContainerButtons">
       <div id="igBotStatusDiv" style="width: 100%;">Ready to accept commands</div>
       <br>
-      <div class="igBotInjectedButton flex6" id="btnGetAllUsersFollowers" title="Loads the current page's followers into the queue">Load Current Page's Followers</div>
-      <div class="igBotInjectedButton flex6" id="btnGetAllUsersFollowing" title="Loads accounts which the current page account is following into the queue">Load Current Page's Following
+      <div class="igBotInjectedButton flex6" id="btnGetAllUsersFollowers" title="Loads the current page's followers into the queue">Load Followers</div>
+      <div class="igBotInjectedButton flex6" id="btnGetAllUsersFollowing" title="Loads accounts which the current page account is following into the queue">Load Followings of this Page
       </div>
       <div class="igBotInjectedButton flex6" id="btnGetCommenters" title="Loads accounts which commented on the current pages media">Load Commenters</div>
       <div class="igBotInjectedButton flex6" id="btnGetLikers" title="Loads accounts which liked the current pages media">Load Likers</div>
       <div class="igBotInjectedButton flex6" id="btnGetAdditionalUserData" title="Gets more data about each account in queue: &#13; Private Status &#13; Follower Count &#13; Following Count &#13; Post Count">Get More Data</div>
-      <div class="igBotInjectedButton flex6" id="btnLoadSavedQueue">Load Queue</div>
-      <div class="igBotInjectedButton flex6" id="btnSaveQueueToStorage">Save Queue</div>
+      <div class="igBotInjectedButton flex6" id="btnLoadSavedQueue">Load Userpool</div>
+      <div class="igBotInjectedButton flex6" id="btnSaveQueueToStorage">Save Userpool</div>
       <br>
       <div class="igBotInjectedButton" id="btnSelectAll" title="Select all shown accounts">Select All</div>
       <div class="igBotInjectedButton" id="btnSelectNone" title="Select nothing">Select None</div>
@@ -159,7 +129,7 @@
         <span>Wait <input type="number" value="1" step="1" id="textHoursAfterHardRateLimit"></input> hours after "hard" rate limit</span>
       </div>
     </details>
-    <div class="igBotInjectedButton" id="btnFollowQueue">Follow All From Queue</div>
+<div class="igBotInjectedButton" id="btnFollowQueue">Follow All From Userpool</div>
     <br>
     <div class="igBotInjectedButton" id="btnLikeHashtag">Like Posts from Current Page Hashtag</div>
     <div class="igBotInjectedButton" id="btnLikeFeed">Like
@@ -179,7 +149,7 @@
         <label for="cbDontUnfollowFilters">
                     <input type="checkbox" checked="checked" id="cbDontUnfollowFilters" /> Do not unfollow people who match my filters</label>
         <label for="cbShowUnfollowingInQueue">
-                    <input type="checkbox" checked="checked" id="cbShowUnfollowingInQueue" /> Show unfollowing in queue (uncheck if browser lags)</label>
+          <input type="checkbox" checked="checked" id="cbShowUnfollowingInQueue" /> Show unfollowing in Userpool (uncheck if browser lags)</label>
       </div>
     </details>
     <div class="igBotInjectedButton" id="btnFollowList">Unfollow Everyone</div>
