@@ -1,7 +1,4 @@
 {
-   "background": {
-      "scripts": ["backgroundscript.js"]
-   },
    "browser_action": {
 
    },
