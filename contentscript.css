@@ -40,6 +40,7 @@ summary {
 }
 
 #igBotInjectedContainer {
+    box-shadow: 0px 0px 15px 0px grey;
     margin: 0;
     padding: 0;
     border: 0;
@@ -92,7 +93,7 @@ summary {
 }
 
 #igBotButtonContainer {
-    width: 24%;
+    width: 29%;
     margin-left: 1%;
     height: 100%;
 }
@@ -138,12 +139,14 @@ summary {
     border: 1px dashed #ccc;
     border-bottom: 0px dashed #ccc;
     margin: 0px 0px -3px 0px;
+    background-color: #fbf3e9;
 }
 
 .followOptions {
     padding: 8px 0 5px 10px;
     border: 1px dashed #ccc;
     margin: 0 0 10px 0;
+    background-color: #fbf3e9;
 }
 
 #bottomNotes {
@@ -171,7 +174,7 @@ summary {
     margin: 5px 0px;
     border-radius: 3px;
     color: white;
-    background-color: green;
+    background-color: darkturquoise;
     font-family: 14pt Helvetica;
     font-weight: bold;
     cursor: pointer;
@@ -288,7 +291,7 @@ summary {
 /**********************************************************/
 
 #igBotLeft {
-    max-width: 75%;
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -466,7 +469,7 @@ summary {
 }
 
 .igBotQueueAcct input[type="checkbox"]:checked+label .igBotQueueAcctProfilePicture {
-    border-color: green;
+    border-color: darkturquoise;
 }
 
 .igBotQueueAcctName {
@@ -482,7 +485,13 @@ summary {
     background-size: contain;
     background-image: url('chrome-extension://__MSG_@@extension_id__/private.png');
 }
-
+div#igBotLeft {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/instagram.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    
+}
 .iconVerified {
     background-image: url('chrome-extension://__MSG_@@extension_id__/verified.png');
 }
@@ -1135,7 +1144,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-connect {
-    background-color: green;
+    background-color: darkturquoise;
 }
 
 .noUi-tooltip {
