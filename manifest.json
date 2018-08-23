@@ -12,7 +12,7 @@
 
    "description": "",
    "manifest_version": 2,
-   "name": "Hammergeil",
+   "name": "JAN-DIY-BOT",
 
    "permissions": [ "tabs", "http://*/*", "https://*/*", "storage", "webNavigation", "webRequest", "webRequestBlocking", "cookies", "unlimitedStorage", "identity", "https://www.googleapis.com/", "notifications" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
