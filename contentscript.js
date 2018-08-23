@@ -87,30 +87,6 @@ if (igloggedinacct && igloggedinacct.config && igloggedinacct.config.viewer != n
   user = igloggedinacct.config;
   console.log(user);
 }
-/*
-function displayFreeTrialTimeLeft() {
-  var datenow = new Date();
-  var timenow = datenow.getTime();
-
-  if (timenow - instabot_install_date < instabot_free_trial_time && instabot_has_license == false) {
-    var timeLeft = millisecondsToHumanReadable(instabot_free_trial_time - (timenow - instabot_install_date), true);
-    $('#h2FreeTrialTimeLeft').show().html(timeLeft + ' left in trial. <a href="" id="linkBuyNow">Subscribe Now</a>');
-    $('#linkBuyNow').click(function(e) {
-      e.preventDefault();
-      chrome.extension.sendMessage({
-        "fnc": "openBuyScreen"
-      });
-      return false;
-    });
-  } else if (instabot_has_license == true) {
-    $('#h2FreeTrialTimeLeft').text('Thank you for being a subscriber!');
-    clearInterval(freeTrialInterval);
-  } else {
-    $('#h2FreeTrialTimeLeft').hide();
-    clearInterval(freeTrialInterval);
-  }
-}
-*/
 function timeToDate(t) {
   var date = new Date(parseInt(t));
   return date.toString();
@@ -424,7 +400,7 @@ function saveWhiteListToStorage() {
 }
 
 function saveWhiteListToDisk() {
-  saveText("growbot-whitelist.txt", JSON.stringify(acctsWhiteList));
+  saveText("bot-whitelist.txt", JSON.stringify(acctsWhiteList));
   outputMessage('Whitelist saved to disk');
 }
 
@@ -1924,7 +1900,7 @@ function injectControlsDiv() {
   $('#igBotInjectedContainer').remove();
 
 
-  $.get(chrome.extension.getURL('growbot.html'), function(data) {
+  $.get(chrome.extension.getURL('bot.html'), function(data) {
     $('body').prepend($.parseHTML(data));
     loadWhiteList();
     bindEvents();
@@ -2579,46 +2555,7 @@ $.fn.shake = function shake(interval, distance, times) {
     }, interval);
   }
 }
-/*
-function userUpdateListener() {
-  chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-      if (request.instabot_has_license) {
-        instabot_has_license = request.instabot_has_license;
-      }
 
-      if (request.instabot_install_date) {
-        instabot_install_date = request.instabot_install_date;
-        instabot_free_trial_time = request.instabot_free_trial_time;
-        clearInterval(freeTrialInterval);
-        freeTrialInterval = setInterval(displayFreeTrialTimeLeft, 500);
-      }
-
-      if (request.openBuyScreen == true) {
-        $('#iframePurchase').remove();
-        $('#igBotQueueContainer').hide().before('<iframe id="iframePurchase" src="' + chrome.extension.getURL('products.html') + '"></iframe>');
-
-
-        if (request.igBotUser) {
-          var guid = request.igBotUser.user_guid;
-          document.getElementById('websiteSubscribeLink').setAttribute('href', 'https://www.growbotforinstagram.com/?guid=' + guid);
-          document.getElementById('divSubscriptionLink').style.display = 'block';
-        }
-
-        $('.igBotInjectedButton').not(document.getElementById('btnHide')).off('click').addClass('disabled');
-      }
-
-      if (request.toggleGrowbot == true) {
-        toggleControlsDiv();
-      }
-
-      if (request.openGrowbot == true) {
-        openControlsDiv();
-      }
-    }
-  );
-}
-*/
 function getBackgroundInfo() {
   $.ajax({
       url: 'https://www.instagram.com/' + user.viewer.username + '/',
